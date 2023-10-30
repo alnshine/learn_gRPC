@@ -1,0 +1,13 @@
+syntax = "proto3";
+option go_package = "grpc/test";
+
+enum ContentType{
+    POST = 0;
+    COMMENT = 1; 
+    reserved 2 to 7; 
+    STREAM =8;
+    STREAM_COMMENT = 9; 
+    reserved 10 to 17;
+    STREAM_ANNOUNCE = 18;
+    reserved 19 to 27;
+}
