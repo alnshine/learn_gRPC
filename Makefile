@@ -1,7 +1,7 @@
 generate_grpc_code:
 	protoc \
-    --go_out=invoicer \
+    --go_out=adder \
     --go_opt=paths=source_relative \
-    --go-grpc_out=invoicer \
+    --go-grpc_out=adder \
     --go-grpc_opt=paths=source_relative \
-    invoicer.proto
+    adder.proto

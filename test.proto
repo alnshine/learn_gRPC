@@ -1,0 +1,21 @@
+syntax = "proto3";
+
+option go_package = "grpc/test";
+
+service MyService {
+    rpc GetNews(NewsRequest) returns (stream NewsArticle);
+}
+service MyService2 {
+    rpc GetNews2(stream NewsRequest) returns (NewsArticle);
+}
+message NewsRequest {
+    string topic = 1;
+    int32 max_results = 2;
+}
+
+message NewsArticle {
+    string title = 1;
+    string content = 2;
+    string author = 3;
+    string timestamp = 4;
+}
